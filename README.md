@@ -65,7 +65,7 @@ SUPABASE_URL = your_supabase_url
 SUPABASE_KEY = your_supabase_key
 ```
 
-1. **Run the Application**
+3. **Run the Application**
 
    **Option 1: Run Locally**
    ```bash
