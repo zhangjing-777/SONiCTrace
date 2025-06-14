@@ -19,6 +19,11 @@ langchain-community
 pgvector
 langchain-openai 
 langchain-huggingface
+langchain-core
 
 # OpenAI LLM (optional)
 openai  # ChatOpenAI
+
+# DB
+supabase-py
+
