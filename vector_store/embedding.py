@@ -1,5 +1,5 @@
 from sentence_transformers import SentenceTransformer
-from config import EMBEDDING_MODEL_NAME
+from ..config import EMBEDDING_MODEL_NAME
 
 
 def get_embedding_model():

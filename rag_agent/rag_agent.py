@@ -2,9 +2,9 @@ from langchain_core.runnables import RunnableLambda, RunnableMap
 from langchain_core.output_parsers import StrOutputParser
 #from langchain_core.runnables.base import Runnable
 #from langchain_core.runnables.cache import SQLiteCache
-from retriever import retriever
-from prompting import prompt
-from llm import llm
+from .retriever import retriever
+from .prompting import prompt
+from .llm import llm
 from supabase import create_client
 import datetime
 import uuid

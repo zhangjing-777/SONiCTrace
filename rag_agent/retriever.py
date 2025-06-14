@@ -2,7 +2,7 @@ from langchain_community.vectorstores.pgvector import PGVector
 from langchain_huggingface import HuggingFaceEmbeddings
 import os
 from dotenv import load_dotenv
-from config import EMBEDDING_MODEL_NAME
+from ..config import EMBEDDING_MODEL_NAME
 
 load_dotenv()
 

@@ -1,8 +1,7 @@
-
 from langchain.chains import RetrievalQA
-from llm import llm
-from retriever import retriever
-from prompting import prompt_template
+from .llm import llm
+from .retriever import retriever
+from .prompting import prompt_template
 
 
 # 构造 RAG QA chain with prompt

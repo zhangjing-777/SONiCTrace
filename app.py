@@ -1,10 +1,10 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from embedding import get_embedding_model         
-from chunking import chunks_app  
-from vector_store import insert_chunks_to_pg, clear_pgvector_table
-from rag_pipeline import qa_chain   
-from rag_agent import RAGAgent
+from vector_store.embedding import get_embedding_model         
+from vector_store.chunking import chunks_app  
+from vector_store.vector_store import insert_chunks_to_pg, clear_pgvector_table
+from rag_agent.rag_pipeline import qa_chain   
+from rag_agent.rag_agent import RAGAgent
 from config import AVGO_TABLE_NAME
        
 

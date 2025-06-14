@@ -3,7 +3,7 @@ import fitz
 import re
 from pathlib import Path
 from transformers import AutoTokenizer
-from config import get_vendor_config, EMBEDDING_MODEL_NAME
+from ..config import get_vendor_config, EMBEDDING_MODEL_NAME
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 

@@ -1,7 +1,7 @@
 import os
 from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
-from config import LLM_NAME
+from ..config import LLM_NAME
 
 
 
