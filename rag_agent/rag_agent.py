@@ -1,3 +1,16 @@
+"""
+RAG (Retrieval-Augmented Generation) Agent implementation.
+
+This module implements a RAG agent that combines:
+- Document retrieval from vector store
+- Context-aware question answering
+- Chat history management
+- Memory persistence using Supabase
+
+The agent maintains conversation history and provides context-aware responses
+by retrieving relevant documents and using them to generate answers.
+"""
+
 from langchain_core.runnables import RunnableLambda, RunnableMap
 from langchain_core.output_parsers import StrOutputParser
 #from langchain_core.runnables.base import Runnable

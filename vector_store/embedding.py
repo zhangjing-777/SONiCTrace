@@ -1,3 +1,15 @@
+"""
+Document Embedding Model configuration.
+
+This module provides functionality for:
+- Loading and configuring the embedding model
+- Generating embeddings for text chunks
+- Managing embedding model parameters
+
+The embedding model is used to convert text into vector representations
+for similarity search in the vector store.
+"""
+
 from sentence_transformers import SentenceTransformer
 from ..config import EMBEDDING_MODEL_NAME
 

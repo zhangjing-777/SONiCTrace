@@ -1,3 +1,19 @@
+"""
+Configuration settings for the RAG system.
+
+This module contains all configuration parameters for:
+- Document chunking settings for different vendors
+- Embedding model configuration
+- Vector store table names
+- Language model settings
+
+The configuration is centralized here to make it easy to:
+- Modify system parameters
+- Add support for new vendors
+- Update model settings
+- Maintain consistent configuration across the system
+"""
+
 # Chunking Config
 
 VENDOR_CONFIGS = {

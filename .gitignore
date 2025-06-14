@@ -49,4 +49,4 @@ htmlcov/
 coverage.xml
 
 # Files
-.pdf
+*.pdf

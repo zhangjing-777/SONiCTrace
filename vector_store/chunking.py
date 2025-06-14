@@ -1,3 +1,25 @@
+"""
+Document Chunking with Semantic-Aware Strategy.
+
+This module implements a sophisticated chunking strategy that:
+- Uses semantic boundaries (paragraphs, sections) for chunking
+- Maintains context by keeping related content together
+- Applies vendor-specific configurations for different document types
+- Filters out irrelevant content (headers, footers, page numbers)
+
+Key chunking features:
+- Semantic-aware splitting based on document structure
+- Configurable chunk sizes and overlap
+- Vendor-specific content filtering
+- Context preservation across chunks
+
+The chunking strategy is crucial for:
+- Maintaining semantic coherence in chunks
+- Preserving document structure and context
+- Enabling accurate retrieval and generation
+- Supporting different document formats and vendors
+"""
+
 import os
 import fitz
 import re

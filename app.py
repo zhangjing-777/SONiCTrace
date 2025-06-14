@@ -1,3 +1,18 @@
+"""
+FastAPI application for RAG (Retrieval-Augmented Generation) system with PGVector integration.
+
+This module provides REST API endpoints for:
+- Querying the RAG system
+- Uploading and processing PDF documents
+- Managing vector store tables
+- Interactive chat functionality
+
+The API uses FastAPI framework and integrates with:
+- Vector store for document storage and retrieval
+- RAG agent for intelligent question answering
+- PGVector for vector database operations
+"""
+
 from fastapi import FastAPI
 from pydantic import BaseModel
 from vector_store.embedding import get_embedding_model         

@@ -1,3 +1,16 @@
+"""
+Document Retriever implementation for the RAG system.
+
+This module provides the document retrieval functionality:
+- Uses PGVector for vector similarity search
+- Integrates with HuggingFace embeddings
+- Configures connection to the vector database
+- Provides methods for retrieving relevant documents
+
+The retriever is responsible for finding the most relevant documents
+based on semantic similarity to the query.
+"""
+
 from langchain_community.vectorstores.pgvector import PGVector
 from langchain_huggingface import HuggingFaceEmbeddings
 import os

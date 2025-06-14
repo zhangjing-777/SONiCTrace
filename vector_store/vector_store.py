@@ -1,3 +1,14 @@
+"""
+Vector Store operations and management.
+
+This module provides functionality for:
+- Storing document chunks and embeddings in PGVector
+- Clearing vector store tables
+
+The vector store is used to persist document embeddings and enable
+efficient similarity search.
+"""
+
 import os
 import psycopg2
 from dotenv import load_dotenv
