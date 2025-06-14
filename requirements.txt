@@ -1,0 +1,24 @@
+# Core
+python-dotenv
+psycopg2-binary==2.9.9
+fastapi
+uvicorn
+
+# PDF Parsing
+PyMuPDF==1.23.21  # fitz
+
+# Embeddings & Transformers
+sentence-transformers
+torch
+transformers
+InstructorEmbedding
+
+# LangChain & pgvector
+langchain
+langchain-community
+pgvector
+langchain-openai 
+langchain-huggingface
+
+# OpenAI LLM (optional)
+openai  # ChatOpenAI
