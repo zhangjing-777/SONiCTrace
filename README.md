@@ -46,11 +46,11 @@ The project is organized into two main modules:
    ```
 
 2. **Environment Variables**
+   
 Create a .env file in the project root with the following content (fill in your actual values):
 
 ```
 # PostgreSQL connection settings
-
 PG_DBNAME=your_dbname
 PG_USER=your_pg_user
 PG_PASSWORD=your_pg_password
@@ -58,11 +58,9 @@ PG_HOST=your_pg_host
 PG_PORT=your_pg_port
 
 # LLM setting
-
 OPENROUTER_API_KEY = your_openrouter_api_key
 
 # Supabase setting
-
 SUPABASE_URL = your_supabase_url
 SUPABASE_KEY = your_supabase_key
 ```
