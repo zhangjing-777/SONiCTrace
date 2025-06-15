@@ -16,9 +16,12 @@ from langchain_huggingface import HuggingFaceEmbeddings
 import os
 from dotenv import load_dotenv
 from ..config import EMBEDDING_MODEL_NAME
+from ..logger import setup_logger
 
 load_dotenv()
 
+# Setup logger
+logger = setup_logger("retriever", "retriever.log")
 
 dbname = os.getenv("PG_DBNAME")
 user = os.getenv("PG_USER")
@@ -28,19 +31,22 @@ port = os.getenv("PG_PORT")
 
 CONNECTION_STRING = f"postgresql+psycopg2://{user}:{password}@{host}:{port}/{dbname}"
 
-
-
 embedding_model = HuggingFaceEmbeddings(
     model_name=EMBEDDING_MODEL_NAME,
     encode_kwargs={"normalize_embeddings": True}
 )
 
-
 def retriever(collection_name, k=3):
-    vectorstore = PGVector(
-        collection_name=collection_name,
-        connection_string=CONNECTION_STRING,
-        embedding_function=embedding_model,
-    )
-    return vectorstore.as_retriever(search_kwargs={"k": k})
+    try:
+        logger.info(f"Initializing retriever for collection: {collection_name}")
+        vectorstore = PGVector(
+            collection_name=collection_name,
+            connection_string=CONNECTION_STRING,
+            embedding_function=embedding_model,
+        )
+        logger.info(f"Successfully initialized retriever for collection: {collection_name}")
+        return vectorstore.as_retriever(search_kwargs={"k": k})
+    except Exception as e:
+        logger.error(f"Error initializing retriever: {str(e)}")
+        raise
 

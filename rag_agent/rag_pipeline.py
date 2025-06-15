@@ -14,7 +14,7 @@ by retrieving relevant documents before generating answers.
 from langchain.chains import RetrievalQA
 from .llm import llm
 from .retriever import retriever
-from .prompting import prompt_template
+from .prompting_template import prompt_template
 
 
 # build RAG QA chain with prompt
